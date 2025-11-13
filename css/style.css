@@ -118,3 +118,248 @@ footer {
 footer i {
   color: #FFE066;
 }
+/* ======== Estilo Geral ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D1117;
+  color: #EDEDED;
+  scroll-behavior: smooth;
+}
+
+/* ======== Navbar ======== */
+.navbar {
+  background-color: rgba(10, 15, 20, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: rgba(10, 15, 20, 1);
+}
+
+.navbar-brand {
+  color: #00A8E8 !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #EDEDED !important;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #00A8E8 !important;
+  transform: translateY(-2px);
+}
+
+/* ======== Hero Section ======== */
+.hero {
+  background-image: url('../img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin: 15px 0 30px;
+}
+
+.btn-primary {
+  background-color: #00A8E8;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0077B6;
+  transform: scale(1.05);
+}
+
+/* ======== Sobre ======== */
+#about {
+  padding: 80px 0;
+  background-color: #161B22;
+}
+
+#about h3 {
+  color: #00A8E8;
+  font-weight: 700;
+}
+
+#about img {
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* ======== Estatísticas ======== */
+.stats {
+  background: linear-gradient(135deg, #0077B6, #023E8A);
+  color: #fff;
+  padding: 80px 0;
+}
+
+.stats-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.stats-item:hover {
+  transform: translateY(-6px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stats-item i {
+  color: #90E0EF;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ======== Rodapé ======== */
+footer {
+  background-color: #0B0E13;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #00A8E8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* ======== Hero Section ======== */
+.hero {
+  background-image: url('../img/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin: 15px 0 30px;
+}
+
+.btn-primary {
+  background-color: #00A8E8;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0077B6;
+  transform: scale(1.05);
+}
+/* ======== Catálogo ======== */
+.catalogo {
+  background-color: #161B22;
+}
+
+.catalogo h2 {
+  font-weight: 700;
+}
+
+.catalogo p {
+  color: #cfcfcf;
+}
+
+.catalogo .card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalogo .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 168, 232, 0.3);
+}
+
+.catalogo .card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.catalogo .card-body {
+  text-align: left;
+}
+
+.catalogo .btn-primary {
+  border-radius: 25px;
+  background-color: #00A8E8;
+  border: none;
+  transition: 0.3s;
+}
+
+.catalogo .btn-primary:hover {
+  background-color: #0077B6;
+  transform: scale(1.05);
+}
