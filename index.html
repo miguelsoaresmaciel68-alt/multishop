@@ -1,462 +1,512 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MultiShop | Tecnologia e Praticidade</title>
+<html lang="pt-BR">
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MultiShop | Tecnologia e Praticidade</title>
+  <meta name="description"
+    content="MultiShop — produtos em tecnologia, iluminação inteligente, ferramentas e segurança. Loja online com visual moderno e responsivo." />
+  <meta name="theme-color" content="#071023" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="MultiShop | Tecnologia e Praticidade" />
+  <meta property="og:description" content="Produtos em tecnologia: lâmpadas inteligentes, câmeras e ferramentas." />
+  <meta property="og:image" content="img/og-image.jpg" />
+  <meta property="og:type" content="website" />
 
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
-    />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Fonte Google -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- CSS externo -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <!-- AOS (animate on scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <body>
-    <!-- ====== Navbar ====== -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#inicio"
-          ><i class="bi bi-bag-check-fill text-primary me-2"></i> MultiShop</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Alternar menu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="#inicio">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#catalogo">Catalogo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#produtos">Produtos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#stats">Estatísticas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contato">Contato</a>
-            </li>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"MultiShop",
+      "url":"https://seusite.com",
+      "logo":"https://seusite.com/img/logo.png",
+      "sameAs":[
+        "https://www.facebook.com/migleds/",
+        "https://wa.me/5511993192686"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img src="img/logo.png" alt="MultiShop logo" class="me-2 logo" />
+        <span>MultiShop</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero d-flex align-items-center">
+    <div class="container text-center text-lg-start">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h1 class="display-5 fw-bold">Soluções em <span class="highlight">Tecnologia</span> e <span
+              class="highlight">Praticidade</span></h1>
+          <p class="lead mb-4">Iluminação inteligente, ferramentas profissionais e segurança conectada para transformar
+            seu dia a dia.</p>
+          <div class="d-flex gap-2">
+            <a href="#catalogo" class="btn btn-primary btn-lg">Ver produtos</a>
+            <a href="#contato" class="btn btn-outline-light btn-lg">Fale conosco</a>
+          </div>
+          <div class="mt-4 d-flex gap-3 small text-muted">
+            <div><i class="bi bi-truck"></i> Envio rápido</div>
+            <div><i class="bi bi-shield-lock-fill"></i> Compra segura</div>
+            <div><i class="bi bi-phone-fill"></i> Suporte 08h–18h</div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center d-none d-lg-block" data-aos="zoom-in">
+          <img src="img/hero-products.png" alt="Produtos destacados" class="img-fluid hero-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-5" data-aos="fade-up">
+          <img src="img/sobre.png" alt="Sobre a Multishop" class="img-fluid rounded-3 shadow-lg" loading="lazy">
+        </div>
+        <div class="col-md-7" data-aos="fade-left">
+          <h2 class="mb-3">🔧 Tecnologia e praticidade para o seu dia a dia</h2>
+          <p>Na <strong>MultiShop</strong> entregamos produtos pensados para eficiência, economia e segurança. Temos um
+            catálogo curado com itens de qualidade para uso residencial e profissional.</p>
+          <ul class="list-unstyled mt-4 features">
+            <li><i class="bi bi-lightbulb-fill"></i> Iluminação inteligente e econômica</li>
+            <li><i class="bi bi-tools"></i> Ferramentas robustas e confiáveis</li>
+            <li><i class="bi bi-shield-fill-check"></i> Soluções em segurança e automação</li>
           </ul>
+          <a href="#catalogo" class="btn btn-outline-primary mt-3">Explore o catálogo</a>
         </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- ====== Hero Section ====== -->
-    <section class="hero" id="inicio">
-      <div class="container content">
-        <h1>Bem-vindo à <span class="text-primary">MultiShop</span></h1>
-        <p>Inovação, tecnologia e praticidade para o seu dia a dia.</p>
-        <a href="#about" class="btn btn-primary">Saiba mais</a>
+  <!-- CATALOGO MELHORADO -->
+  <section id="catalogo" class="py-5 bg-section">
+    <div class="container">
+
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold display-6">Nosso Catálogo</h2>
+        <p class="text-muted">Produtos selecionados com garantia, qualidade e suporte técnico especializado.</p>
       </div>
-    </section>
 
-    <!-- ====== Sobre ====== -->
-    <section id="about">
-      <div class="container">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-5">
-            <img
-              src="img/sobre.png"
-              alt="Sobre a Multishop"
-              class="img-fluid"
-            />
-          </div>
-          <div class="col-lg-7">
-            <h3>🔧 Tecnologia e praticidade para o seu dia a dia</h3>
-            <p>
-              Na <strong>Multishop</strong>, oferecemos produtos modernos que
-              unem praticidade e segurança, como lâmpadas de LED inteligentes,
-              ferramentas de precisão e câmeras de monitoramento. Nosso
-              compromisso é tornar sua vida mais fácil e conectada.
-            </p>
-            <ul class="list-unstyled mt-4">
-              <li class="d-flex mb-3">
-                <i class="bi bi-lightbulb-fill text-primary me-3 fs-4"></i>
-                <p>Iluminação Inteligente</p>
-              </li>
-              <li class="d-flex mb-3">
-                <i class="bi bi-tools text-primary me-3 fs-4"></i>
-                <p>Ferramentas e Precisão</p>
-              </li>
-              <li class="d-flex mb-3">
-                <i class="bi bi-shield-lock-fill text-primary me-3 fs-4"></i>
-                <p>Segurança e Automação</p>
-              </li>
-            </ul>
-          </div>
+      <div class="row g-4">
+
+        <!-- Card Moderno 1 -->
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="50">
+          <article class="catalog-card">
+            <div class="badge-tag new">NOVO</div>
+            <div class="catalog-img">
+              <img src="img/Camera (3).png" alt="Lâmpadas Inteligentes">
+            </div>
+            <div class="catalog-content">
+              <h5>Lâmpadas Inteligentes</h5>
+              <p>Controle remoto, várias cores, Wi-Fi, super econômica.</p>
+              <div class="price">R$ 79,90</div>
+              <button class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modalProduct1">
+                Ver detalhes
+              </button>
+            </div>
+          </article>
         </div>
+
+        <!-- Card Moderno 2 -->
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <article class="catalog-card">
+            <div class="badge-tag best">MAIS VENDIDO</div>
+            <div class="catalog-img">
+              <img src="img/Camera (2).png" alt="Ferramentas Elétricas">
+            </div>
+            <div class="catalog-content">
+              <h5>Ferramentas Elétricas</h5>
+              <p>Alta potência, baixa vibração e durabilidade profissional.</p>
+              <div class="price">R$ 149,90</div>
+              <button class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modalProduct2">
+                Ver detalhes
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card Moderno 3 -->
+        <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="150">
+          <article class="catalog-card">
+            <div class="badge-tag offer">OFERTA</div>
+            <div class="catalog-img">
+              <img src="img/Camera (1).png" alt="Câmeras de Segurança">
+            </div>
+            <div class="catalog-content">
+              <h5>Câmeras de Segurança</h5>
+              <p>Monitoramento Full HD, visão noturna e gravação na nuvem.</p>
+              <div class="price">R$ 199,90</div>
+              <button class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modalProduct3">
+                Ver detalhes
+              </button>
+            </div>
+          </article>
+        </div>
+
       </div>
-    </section>
-    <!-- ====== Catálogo ====== -->
-    <section id="catalogo" class="catalogo py-5 text-light">
-      <div class="container text-center">
-        <h2 class="fw-bold text-primary mb-4">
-          <i class="bi bi-grid-fill me-2"></i>Nosso Catálogo
-        </h2>
-        <p class="mb-5">
-          Confira alguns dos nossos produtos mais populares em tecnologia e
-          automação.
-        </p>
+    </div>
+  </section>
 
-        <div class="row gy-4">
-          <!-- Desmonstração 1 -->
-          <div class="col-md-4">
-            <div class="card bg-dark border-0 shadow-lg h-100">
-              <img
-                src="img/Camera (3).png"
-                class="card-img-top"
-                alt="Lâmpadas Inteligentes"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Lâmpadas Inteligentes</h5>
-                <p class="card-text">
-                  Controle remoto via app, economia de energia e iluminação
-                  moderna.
-                </p>
-                <a href="#produtos" class="btn btn-primary w-100"
-                  >Ver detalhes</a
-                >
-              </div>
+
+
+
+  <!-- MODAIS DE PRODUTOS (exemplo) -->
+  <div class="modal fade" id="modalProduct1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Lâmpadas Inteligentes — Kit</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <img src="img/led.png" alt="Kit LED" class="img-fluid rounded" loading="lazy">
             </div>
-          </div>
-
-          <!-- Desmonstração 2 -->
-          <div class="col-md-4">
-            <div class="card bg-dark border-0 shadow-lg h-100">
-              <img
-                src="img/Camera (2).png"
-                class="card-img-top"
-                alt="Ferramentas Elétricas"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Ferramentas Elétricas</h5>
-                <p class="card-text">
-                  Equipamentos potentes e duráveis para profissionais e
-                  hobbystas.
-                </p>
-                <a href="#produtos" class="btn btn-primary w-100"
-                  >Ver detalhes</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Desmonstração 3 -->
-          <div class="col-md-4">
-            <div class="card bg-dark border-0 shadow-lg h-100">
-              <img
-                src="img/Camera (1).png"
-                class="card-img-top"
-                alt="Câmeras de Segurança"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Câmeras de Segurança</h5>
-                <p class="card-text">
-                  Monitoramento inteligente com visão noturna e acesso via
-                  smartphone.
-                </p>
-                <a href="#produtos" class="btn btn-primary w-100"
-                  >Ver detalhes</a
-                >
+            <div class="col-md-6">
+              <p>Controle total pelo app, agendamento e economia de até 85% em comparação a lâmpadas incandescentes.</p>
+              <ul>
+                <li>Compatível com Alexa e Google Home</li>
+                <li>Temperatura de cor ajustável (2700K–6500K)</li>
+                <li>Garantia de 2 anos</li>
+              </ul>
+              <div class="d-grid gap-2 mt-3">
+                <a href="#" class="btn btn-primary">Comprar agora</a>
+                <a href="https://wa.me/5511993192686?text=Tenho%20interesse%20no%20Kit%20LED"
+                  class="btn btn-outline-light">Perguntar no WhatsApp</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- ====== Produtos ====== -->
-    <section id="produtos" class="py-5 bg-dark text-light">
-      <div class="container text-center">
-        <h2 class="fw-bold text-primary mb-4">
-          <i class="bi bi-bag-fill me-2"></i>Produtos em Destaque
-        </h2>
-        <p class="mb-5">
-          Conheça alguns dos nossos produtos mais vendidos e de maior qualidade.
-        </p>
+  <!-- (Você pode duplicar e adaptar os modais para os outros produtos) -->
 
-        <div class="row gy-4">
-          <!-- Produto 1 -->
-          <div class="col-md-4">
-            <div class="card bg-secondary border-0 shadow-lg h-100">
-              <img src="img/led.png" class="card-img-top" alt="Produto 1" />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Kit LED Completo</h5>
-                <p class="card-text">
-                  Iluminação potente, econômica e ideal para qualquer ambiente.
-                </p>
-                <a href="#" class="btn btn-primary w-100">Ver detalhes</a>
-              </div>
+  <!-- PRODUTOS EM DESTAQUE MELHORADOS -->
+  <section id="produtos" class="py-5">
+    <div class="container">
+
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold display-6">Produtos em Destaque</h2>
+        <p class="text-muted">Itens premium com qualidade garantida e os melhores preços.</p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Produto 1 -->
+        <div class="col-md-4" data-aos="flip-left">
+          <div class="product-box">
+            <div class="product-image">
+              <img src="img/led.png" alt="Kit LED Completo">
+            </div>
+            <div class="product-info">
+              <h5>Kit LED Completo</h5>
+              <p class="text-muted">Alto brilho, baixa energia e ultra durável.</p>
+              <div class="price">R$ 89,90</div>
+              <button class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modalDestaque1">
+                Ver detalhes
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="col-md-4" data-aos="flip-left" data-aos-delay="50">
+          <div class="product-box">
+            <div class="product-image">
+              <img src="img/segurança.png" alt="Câmera 360°">
+            </div>
+            <div class="product-info">
+              <h5>Câmera 360°</h5>
+              <p class="text-muted">Full HD, visão noturna e rotação automática.</p>
+              <div class="price">R$ 159,90</div>
+              <button class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modalDestaque2">
+                Ver detalhes
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+          <div class="product-box">
+            <div class="product-image">
+              <img src="img/ferramenta.png" alt="Ferramenta Multifunção">
+            </div>
+            <div class="product-info">
+              <h5>Ferramenta Multifunção</h5>
+              <p class="text-muted">Ideal para cortes, polimentos e reparos.</p>
+              <div class="price">R$ 129,90</div>
+              <button class="btn btn-primary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#modalDestaque3">
+                Ver detalhes
+              </button>
+
             </div>
           </div>
 
-          <!-- Produto 2 -->
-          <div class="col-md-4">
-            <div class="card bg-secondary border-0 shadow-lg h-100">
-              <img
-                src="img/segurança.png"
-                class="card-img-top"
-                alt="Produto 2"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Câmera 360°</h5>
-                <p class="card-text">
-                  Monitoramento total com alta definição e visão noturna.
-                </p>
-                <a href="#" class="btn btn-primary w-100">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
+  </section>
+  <div class="modal fade" id="modalDestaque1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-light">
 
-          <!-- Produto 3 -->
-          <div class="col-md-4">
-            <div class="card bg-secondary border-0 shadow-lg h-100">
-              <img
-                src="img/ferramenta.png"
-                class="card-img-top"
-                alt="Produto 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Ferramenta Multifunção</h5>
-                <p class="card-text">
-                  Perfeita para pequenos reparos, com qualidade e durabilidade.
-                </p>
-                <a href="#" class="btn btn-primary w-100">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Kit LED Completo</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
 
-          <!-- Produto 4 -->
-          <div class="col-md-4">
-            <div class="card bg-secondary border-0 shadow-lg h-100">
-              <img src="img/fonte.png" class="card-img-top" alt="Produto 4" />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Fonte Chaveada 12V</h5>
-                <p class="card-text">
-                  Compacta, eficiente e ideal para projetos eletrônicos.
-                </p>
-                <a href="#" class="btn btn-primary w-100">Ver detalhes</a>
-              </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img src="img/led.png" class="img-fluid rounded" alt="Kit LED">
             </div>
-          </div>
 
-          <!-- Produto 5 -->
-          <div class="col-md-4">
-            <div class="card bg-secondary border-0 shadow-lg h-100">
-              <img
-                src="img/lanterna.png"
-                class="card-img-top"
-                alt="Produto 5"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-primary">
-                  Lanterna LED Recarregável
-                </h5>
-                <p class="card-text">
-                  Alta potência, bateria duradoura e resistente à água.
-                </p>
-                <a href="#" class="btn btn-primary w-100">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
+            <div class="col-md-6">
+              <p>Um kit completo com alta luminosidade, baixo consumo e durabilidade extrema. Ideal para residências,
+                comércios e ambientes profissionais.</p>
 
-          <!-- Produto 6 -->
-          <div class="col-md-4">
-            <div class="card bg-secondary border-0 shadow-lg h-100">
-              <img src="img/fura.png" class="card-img-top" alt="Produto 6" />
-              <div class="card-body">
-                <h5 class="card-title text-primary">Furadeira</h5>
-                <p class="card-text">
-                  Ideal para artesanato, hobby e reparos domésticos.
-                </p>
-                <a href="#" class="btn btn-primary w-100">Ver detalhes</a>
+              <ul>
+                <li>Economia de 85% de energia</li>
+                <li>LED de longa vida útil</li>
+                <li>Luz forte e uniforme</li>
+              </ul>
+
+              <h4 class="text-primary mt-3">R$ 89,90</h4>
+
+              <div class="d-grid gap-2 mt-3">
+                <a href="https://wa.me/5511993192686?text=Tenho%20interesse%20no%20Kit%20LED"
+                  class="btn btn-primary">Comprar agora</a>
+                <a href="https://wa.me/5511993192686?text=Tenho%20interesse%20no%20Kit%20LED"
+                  class="btn btn-outline-light">Falar no WhatsApp</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ====== Estatísticas ====== -->
-    <section class="stats text-center" id="stats">
-      <div class="container">
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-3 col-md-4">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i
-              ><span
-                class="purecounter fs-2 fw-bold"
-                data-purecounter-start="0"
-                data-purecounter-end="350"
-                data-purecounter-duration="2"
-              ></span>
-              <p><strong>Avaliações</strong> Positivas</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalDestaque2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-light">
+
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Câmera de Segurança 360°</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img src="img/segurança.png" class="img-fluid rounded" alt="Camera 360">
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="stats-item">
-              <i class="bi bi-box-seam"></i
-              ><span
-                class="purecounter fs-2 fw-bold"
-                data-purecounter-start="0"
-                data-purecounter-end="1500"
-                data-purecounter-duration="2"
-              ></span>
-              <p><strong>Produtos</strong> Vendidos</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="stats-item">
-              <i class="bi bi-people-fill"></i
-              ><span
-                class="purecounter fs-2 fw-bold"
-                data-purecounter-start="0"
-                data-purecounter-end="8000"
-                data-purecounter-duration="2"
-              ></span>
-              <p><strong>Clientes</strong> Satisfeitos</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="stats-item">
-              <i class="bi bi-calendar-check"></i
-              ><span
-                class="purecounter fs-2 fw-bold"
-                data-purecounter-start="0"
-                data-purecounter-end="7"
-                data-purecounter-duration="2"
-              ></span>
-              <p><strong>Anos</strong> de Experiência</p>
+
+            <div class="col-md-6">
+              <p>Monitoramento completo da sua casa ou empresa, com visão noturna e alta definição.</p>
+
+              <ul>
+                <li>Rotação automática 360°</li>
+                <li>Full HD + visão noturna</li>
+                <li>Acesso pelo celular</li>
+              </ul>
+
+              <h4 class="text-primary mt-3">R$ 159,90</h4>
+
+              <div class="d-grid gap-2 mt-3">
+                <a href="https://wa.me/5511993192686?text=Tenho%20interesse%20na%20Câmera%20360"
+                  class="btn btn-primary">Comprar agora</a>
+                <a href="https://wa.me/5511993192686?text=Tenho%20interesse%20na%20Câmera%20360"
+                  class="btn btn-outline-light">Falar no WhatsApp</a>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+  <div class="modal fade" id="modalDestaque3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark text-light">
 
-    <!-- ====== Rodapé ====== -->
-    <footer>
-      <p>&copy; 2025 MultiShop — Todos os direitos reservados.</p>
-      <p>
-        <a href="#">Política de Privacidade</a> |
-        <a href="#">Termos de Serviço</a>
-      </p>
-    </footer>
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Ferramenta Multifunção</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
-    <script>
-      new PureCounter();
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        navbar.classList.toggle("scrolled", window.scrollY > 50);
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img src="img/ferramenta.png" class="img-fluid rounded" alt="Ferramenta">
+            </div>
+
+            <div class="col-md-6">
+              <p>Versátil, compacta e poderosa para cortar, lixar, polir e fazer reparos sem esforço.</p>
+
+              <ul>
+                <li>Motor potente e silencioso</li>
+                <li>Compatível com diversos acessórios</li>
+                <li>Ideal para uso profissional</li>
+              </ul>
+
+              <h4 class="text-primary mt-3">R$ 129,90</h4>
+
+              <div class="d-grid gap-2 mt-3">
+                <a href="https://wa.me/5511993192686?text=Tenho%20interesse%20na%20Ferramenta%20Multifunção"
+                  class="btn btn-primary">Comprar agora</a>
+                <a href="https://wa.me/5511993192686?text=Tenho%20interesse%20na%20Ferramenta%20Multifunção"
+                  class="btn btn-outline-light">Falar no WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-5 bg-section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <h3>Entre em contato</h3>
+          <p class="text-muted">Dúvidas, suporte ou pedidos especiais — respondo rápido.</p>
+
+          <ul class="list-unstyled contact-info">
+            <li><i class="bi bi-geo-alt-fill"></i> Av. Raimundo Pereira de Magalhães, 13015 - São Paulo, SP</li>
+            <li><i class="bi bi-telephone-fill"></i> (55) 11 98923-3935</li>
+            <li><i class="bi bi-envelope-fill"></i> miguelsoaresmaciel68@gmail.com</li>
+            <li><i class="bi bi-clock-fill"></i> Atendimento: 08h às 18h (Seg–Sex)</li>
+          </ul>
+
+          <div class="socials mt-3">
+            <a href="https://www.facebook.com/migleds/" aria-label="Facebook" class="me-2"><i
+                class="bi bi-facebook fs-4"></i></a>
+            <a href="#" aria-label="Instagram" class="me-2"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="https://wa.me/5511993192686" aria-label="WhatsApp"><i class="bi bi-whatsapp fs-4"></i></a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/5511993192686" class="whatsapp-fab" aria-label="Abrir WhatsApp"><i
+      class="bi bi-whatsapp"></i></a>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p class="mb-1">&copy; <span id="currentYear"></span> MultiShop — Todos os direitos reservados.</p>
+      <small><a href="#" class="link-underline">Política de Privacidade</a> &nbsp;|&nbsp; <a href="#"
+          class="link-underline">Termos de Serviço</a></small>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+
+  <script>
+    // Init AOS & PureCounter
+    AOS.init({ duration: 700, once: true });
+    new PureCounter();
+
+    // Update footer year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Navbar scroll background
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Close mobile menu after click
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const bsCollapse = bootstrap.Collapse.getInstance(document.getElementById('mainNav')) || new bootstrap.Collapse(document.getElementById('mainNav'), { toggle: false });
+        bsCollapse.hide();
       });
-    </script>
-    <!-- ====== Contato ====== -->
-    <section id="contato" class="py-5 bg-dark text-light">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="fw-bold text-primary">
-            <i class="bi bi-envelope-fill me-2"></i>Entre em Contato
-          </h2>
-          <p>Fale conosco para dúvidas, sugestões ou suporte técnico.</p>
-        </div>
+    });
 
-        <div class="row gy-4 justify-content-center text-center">
-          <!-- Informações de contato -->
-          <div class="col-lg-5">
-            <h4 class="text-primary mb-3">Informações</h4>
-            <p>
-              <i class="bi bi-geo-alt-fill text-primary me-2"></i>
-              Av. Raimundo Pereira de Magalhães, 13015 - São Paulo, SP
-            </p>
-            <p>
-              <i class="bi bi-telephone-fill text-primary me-2"></i>
-              (55) 11 98923-3935
-            </p>
-            <p>
-              <i class="bi bi-envelope-fill text-primary me-2"></i>
-              miguelsoaresmaciel68@gmail.com
-            </p>
-            <p>
-              <i class="bi bi-clock-fill text-primary me-2"></i>
-              Atendimento: 08h às 18h (Seg–Sex)
-            </p>
-          </div>
-        </div>
+    // Contact form (simple client-side + mailto fallback)
+    (function () {
+      const form = document.getElementById('contactForm');
+      const alertBox = document.getElementById('formAlert');
 
-        <!-- Redes sociais -->
-        <div class="mt-4 justify-content-center text-center">
-          <h5 class="text-primary mb-3">Siga-nos</h5>
-          <a
-            href="https://www.facebook.com/migleds/"
-            class="text-light me-3 fs-4"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="#" class="text-light me-3 fs-4"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a href="https://wa.me/5511993192686" class="text-light fs-4"
-            ><i class="bi bi-whatsapp"></i
-          ></a>
-        </div>
-      </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
-    <script>
-      new PureCounter();
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        navbar.classList.toggle("scrolled", window.scrollY > 50);
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          return;
+        }
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Try to send via mailto (fallback). Replace with real AJAX endpoint if available.
+        const subject = encodeURIComponent('Contato pelo site — ' + name);
+        const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\n\n${message}`);
+        window.location.href = `mailto:miguelsoaresmaciel68@gmail.com?subject=${subject}&body=${body}`;
+
+        alertBox.classList.remove('visually-hidden');
+        alertBox.classList.add('text-success');
+        alertBox.textContent = 'Abrindo seu cliente de email para enviar a mensagem...';
       });
-    </script>
+    })();
+  </script>
+</body>
 
-    <!-- FECHAR MENU MOBILE AUTOMATICAMENTE -->
-    <script>
-      const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-      const navbarCollapse = document.getElementById("navbarNav");
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-            toggle: false,
-          });
-          bsCollapse.hide();
-        });
-      });
-    </script>
-  </body>
 </html>
